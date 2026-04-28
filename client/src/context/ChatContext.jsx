@@ -99,6 +99,8 @@
 //     )
 // }
 
+
+
 import { useContext, useState, createContext, useEffect } from "react";
 import { AuthContext } from "./AuthContext";
 import toast from "react-hot-toast";
@@ -139,6 +141,7 @@ export const ChatProvider = ({ children }) => {
   };
 
   // ---------------- SEND MESSAGE ----------------
+
   const sendMessage = async (messageData) => {
     try {
       if (!selectedUser?._id) return;
@@ -170,6 +173,7 @@ export const ChatProvider = ({ children }) => {
   };
 
   // ---------------- SOCKET REALTIME FIX ----------------
+  
   useEffect(() => {
     if (!socket) return;
 
