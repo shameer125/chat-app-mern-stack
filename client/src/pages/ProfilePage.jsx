@@ -75,7 +75,6 @@ const ProfilePage = () => {
                     border-gray-500 rounded-md focus:outline-none focus:ring-2
                      focus:ring-violet-500"
           />
-
           <textarea
             placeholder="Your Bio"
             value={bio}
@@ -88,7 +87,7 @@ const ProfilePage = () => {
           <button
             type="submit"
             className="bg-gradient-to-r from-purple-400
-                  to-violet-600 text-white p-2 rounded-full text-lg cursor-pointer"
+            to-violet-600 text-white p-2 rounded-full text-lg cursor-pointer"
           >
             Save
           </button>
@@ -101,6 +100,7 @@ const ProfilePage = () => {
           alt=""
         />
       </div>
+      
     </div>
   );
 };
