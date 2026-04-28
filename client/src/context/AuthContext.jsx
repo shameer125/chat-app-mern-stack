@@ -122,6 +122,8 @@
 //     );
 // };
 
+
+
 import { useState, useEffect, createContext } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -138,9 +140,11 @@ export const AuthProvider = ({ children }) => {
   const [onlineUser, setOnlineUser] = useState([]);
   const [socket, setSocket] = useState(null);
 
+
   // -------------------------
   // CHECK AUTH (AUTO LOGIN)
   // -------------------------
+  
   const checkAuth = async () => {
     try {
       const { data } = await axios.get("/api/auth/check");
