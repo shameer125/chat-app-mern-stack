@@ -16,7 +16,25 @@ export const io = new Server(server, {
 })
 
 // store online users
-export const userSocket
+export const userSocketMap = {};  // {userId : socketId}
+
+// socket.io connection string
+
+io.on('connection', (socket) => {
+  const userId = socket.handshake.query.userId;
+  console.log("User connceted", userId);
+
+  if (userId) userSocketMap[userId] = socket.id;
+
+  io.emit("getOnlineUsers", Object.keys(userSocketMap));
+
+  socket.on("disconnect", () => {
+    console.log("User Disconnected", userId);
+    delete userSocketMap[userId]
+    io.emit("getOnlineUsers", Object.keys(userSocketMap));
+  })
+  
+})
 
 
 app.use(express.json({ limit: "4mb" }));
