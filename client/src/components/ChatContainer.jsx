@@ -181,8 +181,6 @@
 
 
 
-
-
 import React, { useEffect, useRef, useState, useContext } from "react";
 import assets from "../assets/assets";
 import { formatMessageTime } from "../lib/utils";
@@ -259,7 +257,8 @@ const ChatContainer = () => {
   // ---------------- EMPTY SCREEN ----------------
   if (!selectedUser) {
     return (
-      <div className="flex flex-col items-center justify-center gap-2 text-gray-500 bg-white/10 max-md:hidden">
+      <div className="flex flex-col items-center justify-center gap-2
+      text-gray-500 bg-white/10 max-md:hidden">
         <img src={assets.logo_icon} alt="" className="max-w-16" />
         <p className="text-lg font-medium text-white">Chat anytime, anywhere</p>
       </div>
