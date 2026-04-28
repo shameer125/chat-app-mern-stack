@@ -26,7 +26,6 @@ const LoginPage = () => {
         })
     }
 
-
   return (
     <div
       className="min-h-screen bg-cover bg-center flex items-center justify-center
@@ -45,7 +44,6 @@ const LoginPage = () => {
                   {currState}
                   {isDataSubmitted && <img onClick={() => setIsDataSubmitted(false)}
                     src={assets.arrow_icon} alt="" className="w-5 cursor-pointer" />}
-          
               </h2>
               
               {currState === 'Sign up' && !isDataSubmitted && (
@@ -100,7 +98,8 @@ const LoginPage = () => {
                         cursor-pointer'>Click here</span></p>
                   )}
               </div>
-      </form>
+          </form>
+          
     </div>
   );
 }
