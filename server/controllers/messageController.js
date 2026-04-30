@@ -27,7 +27,6 @@ export const getUserForSidebar = async (req, res) => {
     }
 };
 
-
 // Get all messages for selected user
 
 export const getMessages = async (req, res) => {
@@ -65,6 +64,7 @@ export const markMessagesAsSeen = async (req, res) => {
           res.json({ success: false, message: error.message });
     }
 }
+
 
 // Send messages to the selected user
 
