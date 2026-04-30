@@ -180,7 +180,6 @@
 
 
 
-
 import React, { useEffect, useRef, useState, useContext } from "react";
 import assets from "../assets/assets";
 import { formatMessageTime } from "../lib/utils";
@@ -205,7 +204,6 @@ const ChatContainer = () => {
       toast.error("No user selected");
       return;
     }
-
     if (!input.trim()) return;
 
     try {
