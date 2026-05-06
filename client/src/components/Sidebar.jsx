@@ -217,13 +217,15 @@ const Sidebar = () => {
               <BsThreeDotsVertical className="text-lg" />
             </button>
             {open && (
-              <div className="absolute right-0 top-full mt-1 w-56 rounded-lg bg-[#233138] shadow-2xl py-2 z-30 border border-[#374045] fade-up">
+              <div className="absolute right-0 top-full mt-1 w-56 rounded-lg 
+              bg-[#233138] shadow-2xl py-2 z-30 border border-[#374045] fade-up">
                 <button
                   onClick={() => {
                     setOpen(false);
                     navigate("/profile");
                   }}
-                  className="w-full px-4 py-2.5 text-left text-sm hover:bg-[#182229] flex items-center gap-3"
+                  className="w-full px-4 py-2.5 text-left text-sm hover:bg-[#182229] 
+                  flex items-center gap-3"
                 >
                   <IoSettingsOutline /> Profile / Settings
                 </button>
@@ -232,12 +234,14 @@ const Sidebar = () => {
                     setOpen(false);
                     setNewGroupOpen(true);
                   }}
-                  className="w-full px-4 py-2.5 text-left text-sm hover:bg-[#182229] flex items-center gap-3"
+                  className="w-full px-4 py-2.5 text-left text-sm hover:bg-[#182229] 
+                  flex items-center gap-3"
                 >
                   <MdGroups /> New group
                 </button>
                 <button
-                  className="w-full px-4 py-2.5 text-left text-sm hover:bg-[#182229] flex items-center gap-3"
+                  className="w-full px-4 py-2.5 text-left text-sm hover:bg-[#182229] 
+                  flex items-center gap-3"
                 >
                   <IoArchiveOutline /> Archived
                 </button>
@@ -247,7 +251,8 @@ const Sidebar = () => {
                     setOpen(false);
                     logout();
                   }}
-                  className="w-full px-4 py-2.5 text-left text-sm hover:bg-[#182229] flex items-center gap-3 text-[#f15c6d]"
+                  className="w-full px-4 py-2.5 text-left text-sm hover:bg-[#182229] 
+                  flex items-center gap-3 text-[#f15c6d]"
                 >
                   <MdOutlineLogout /> Log out
                 </button>
