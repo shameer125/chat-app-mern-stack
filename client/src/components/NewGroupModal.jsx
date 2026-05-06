@@ -73,13 +73,16 @@ export default function NewGroupModal({ open, onClose }) {
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 p-4"
+      className="fixed inset-0 z-[100] flex items-center justify-center
+       bg-black/60 p-4"
       role="dialog"
       aria-modal="true"
       aria-label="New group"
     >
-      <div className="w-full max-w-md rounded-xl bg-[#111b21] border border-[#374045] shadow-2xl max-h-[90vh] flex flex-col">
-        <div className="flex items-center justify-between px-4 py-3 border-b border-[#222d34]">
+      <div className="w-full max-w-md rounded-xl bg-[#111b21] border border-[#374045]
+       shadow-2xl max-h-[90vh] flex flex-col">
+        <div className="flex items-center justify-between px-4 py-3 border-b
+         border-[#222d34]">
           <h2 className="text-[#e9edef] font-medium">New group</h2>
           <button
             type="button"
