@@ -43,7 +43,8 @@ const LoginPage = () => {
       </div>
 
       <div className="flex-1 flex items-start justify-center -mt-16 px-4 pb-10">
-        <div className="w-full max-w-md bg-[#111b21] rounded-2xl shadow-2xl border border-[#222d34] overflow-hidden">
+        <div className="w-full max-w-md bg-[#111b21] rounded-2xl shadow-2xl border 
+        border-[#222d34] overflow-hidden">
           <form onSubmit={onSubmit} className="p-8 flex flex-col gap-5">
             <div className="flex items-center gap-3">
               {isSignup && step === 2 && (
@@ -80,7 +81,8 @@ const LoginPage = () => {
                 type="text"
                 placeholder="Full name"
                 required
-                className="bg-[#202c33] text-white px-4 py-3 rounded-lg border border-[#2a3942]
+                className="bg-[#202c33] text-white px-4 py-3 rounded-lg 
+                border border-[#2a3942]
                 focus:border-[#00a884] transition placeholder-[#8696a0]"
               />
             )}
