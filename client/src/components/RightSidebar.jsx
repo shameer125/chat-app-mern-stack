@@ -138,7 +138,8 @@ const RightSidebar = () => {
                   value={addQuery}
                   onChange={(e) => setAddQuery(e.target.value)}
                   placeholder="Search people…"
-                  className="w-full rounded bg-[#202c33] border border-[#374045] px-2 py-1.5 text-xs text-[#e9edef] mb-2"
+                  className="w-full rounded bg-[#202c33] border border-[#374045] px-2 
+                  py-1.5 text-xs text-[#e9edef] mb-2"
                 />
                 <div className="max-h-36 overflow-y-auto space-y-1">
                   {addableUsers.length === 0 ? (
@@ -157,7 +158,8 @@ const RightSidebar = () => {
                             setAddOpen(false);
                           }
                         }}
-                        className="w-full flex items-center gap-2 px-2 py-1.5 rounded hover:bg-[#202c33] text-left"
+                        className="w-full flex items-center gap-2 px-2 py-1.5 rounded 
+                        hover:bg-[#202c33] text-left"
                       >
                         <Avatar
                           src={u.profilePic}
@@ -235,11 +237,13 @@ const RightSidebar = () => {
             </div>
           )}
 
-          <div className="bg-[#111b21] divide-y divide-[#222d34] border-b-8 border-[#0b141a]">
+          <div className="bg-[#111b21] divide-y divide-[#222d34] border-b-8
+          border-[#0b141a]">
             <button
               type="button"
               onClick={() => void toggleStarredPanel()}
-              className="w-full px-5 py-3 flex items-center gap-4 text-sm hover:bg-[#202c33]"
+              className="w-full px-5 py-3 flex items-center gap-4 text-sm
+               hover:bg-[#202c33]"
             >
               <IoStarOutline className="text-xl text-[#aebac1]" />
               Starred messages
