@@ -79,14 +79,16 @@ const CallOverlay = () => {
           <div className="flex items-center justify-center gap-12 mt-8">
             <button
               onClick={rejectCall}
-              className="w-16 h-16 rounded-full bg-[#f15c6d] hover:bg-[#e94c5e] flex items-center justify-center text-white shadow-lg transition"
+              className="w-16 h-16 rounded-full bg-[#f15c6d] hover:bg-[#e94c5e] 
+              flex items-center justify-center text-white shadow-lg transition"
               title="Decline"
             >
               <MdCallEnd className="text-3xl" />
             </button>
             <button
               onClick={acceptCall}
-              className="w-16 h-16 rounded-full bg-[#00a884] hover:bg-[#06cf9c] flex items-center justify-center text-white shadow-lg transition"
+              className="w-16 h-16 rounded-full bg-[#00a884] hover:bg-[#06cf9c]
+              flex items-center justify-center text-white shadow-lg transition"
               title="Accept"
             >
               {isVideo ? (
