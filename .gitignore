@@ -1,4 +1,24 @@
-node_modules
+# dependencies
+node_modules/
+
+# env
 .env
-dist
-build
+
+# client
+client/node_modules/
+client/.env
+
+# server
+server/node_modules/
+server/.env
+
+# build
+build/
+dist/
+
+# logs
+*.log
+
+# system
+.DS_Store
+Thumbs.db
