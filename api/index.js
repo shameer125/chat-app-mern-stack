@@ -6,19 +6,27 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://your-frontend.vercel.app",
+    origin: "*", // temporarily for testing
     credentials: true,
   }),
 );
 
 app.use(express.json());
 
+// connect MongoDB (SAFE for Vercel)
+if (!mongoose.connection.readyState) {
+  mongoose
+    .connect(process.env.MONGO_URI)
+    .then(() => console.log("MongoDB connected"))
+    .catch((err) => console.log(err));
+}
+
 // test route
 app.get("/", (req, res) => {
   res.send("API Working");
 });
 
-// IMPORT ROUTES (check paths carefully)
+// routes
 app.use("/api/users", require("../server/routes/userRoutes"));
 
 module.exports = app;
