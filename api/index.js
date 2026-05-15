@@ -1,17 +1,24 @@
 const express = require("express");
 const cors = require("cors");
+const mongoose = require("mongoose");
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://your-frontend.vercel.app",
+    credentials: true,
+  }),
+);
+
 app.use(express.json());
 
-// connect your routes
-app.use("/api/users", require("../server/routes/userRoutes"));
-app.use("/api/messages", require("../server/routes/messageRoutes"));
-
+// test route
 app.get("/", (req, res) => {
-  res.send("Backend running on Vercel");
+  res.send("API Working");
 });
+
+// IMPORT ROUTES (check paths carefully)
+app.use("/api/users", require("../server/routes/userRoutes"));
 
 module.exports = app;
