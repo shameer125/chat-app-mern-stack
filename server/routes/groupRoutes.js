@@ -20,4 +20,5 @@ router.put("/:id/members", protectRoute, addGroupMembers);
 router.post("/:id/leave", protectRoute, leaveGroup);
 router.get("/:id", protectRoute, getGroup);
 
+
 export default router;

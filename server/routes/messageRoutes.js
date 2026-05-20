@@ -13,6 +13,7 @@ import {
   editMessage,
 } from "../controllers/messageController.js";
 
+
 const messageRouter = express.Router();
 
 messageRouter.get("/users", protectRoute, getUserForSidebar);
