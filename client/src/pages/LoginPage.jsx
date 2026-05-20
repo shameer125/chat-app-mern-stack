@@ -43,8 +43,10 @@ const LoginPage = () => {
       </div>
 
       <div className="flex-1 flex items-start justify-center -mt-16 px-4 pb-10">
-        <div className="w-full max-w-md bg-[#111b21] rounded-2xl shadow-2xl border 
-        border-[#222d34] overflow-hidden">
+        <div
+          className="w-full max-w-md bg-[#111b21] rounded-2xl shadow-2xl border 
+        border-[#222d34] overflow-hidden"
+        >
           <form onSubmit={onSubmit} className="p-8 flex flex-col gap-5">
             <div className="flex items-center gap-3">
               {isSignup && step === 2 && (
@@ -99,8 +101,10 @@ const LoginPage = () => {
                   focus:border-[#00a884] transition placeholder-[#8696a0]"
                 />
 
-                <div className="bg-[#202c33] flex items-center rounded-lg border border-[#2a3942]
-                 focus-within:border-[#00a884] transition">
+                <div
+                  className="bg-[#202c33] flex items-center rounded-lg border border-[#2a3942]
+                 focus-within:border-[#00a884] transition"
+                >
                   <input
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
@@ -191,8 +195,10 @@ const LoginPage = () => {
               )}
             </div>
 
-            <div className="flex items-center gap-2 justify-center text-xs
-             text-[#8696a0] pt-2">
+            <div
+              className="flex items-center gap-2 justify-center text-xs
+             text-[#8696a0] pt-2"
+            >
               <IoLockClosedOutline />
               Your messages are end-to-end encrypted
             </div>
