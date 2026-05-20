@@ -99,7 +99,8 @@ const LoginPage = () => {
                   focus:border-[#00a884] transition placeholder-[#8696a0]"
                 />
 
-                <div className="bg-[#202c33] flex items-center rounded-lg border border-[#2a3942] focus-within:border-[#00a884] transition">
+                <div className="bg-[#202c33] flex items-center rounded-lg border border-[#2a3942]
+                 focus-within:border-[#00a884] transition">
                   <input
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
@@ -147,7 +148,8 @@ const LoginPage = () => {
               type="submit"
               disabled={isSignup && step === 2 && !agreed}
               className="bg-[#00a884] disabled:opacity-50 disabled:cursor-not-allowed
-              hover:bg-[#06cf9c] text-white py-3 rounded-lg font-medium transition flex items-center justify-center gap-2"
+              hover:bg-[#06cf9c] text-white py-3 rounded-lg font-medium transition flex 
+              items-center justify-center gap-2"
             >
               {isSignup
                 ? step === 1
@@ -189,7 +191,8 @@ const LoginPage = () => {
               )}
             </div>
 
-            <div className="flex items-center gap-2 justify-center text-xs text-[#8696a0] pt-2">
+            <div className="flex items-center gap-2 justify-center text-xs
+             text-[#8696a0] pt-2">
               <IoLockClosedOutline />
               Your messages are end-to-end encrypted
             </div>
