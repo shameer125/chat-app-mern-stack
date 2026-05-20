@@ -68,7 +68,10 @@ const CallOverlay = () => {
           </p>
           <div className="relative inline-block my-6">
             <span className="absolute inset-0 rounded-full bg-[#00a884]/40 pulse-ring" />
-            <span className="absolute inset-0 rounded-full bg-[#00a884]/30 pulse-ring" style={{animationDelay:"0.3s"}} />
+            <span
+              className="absolute inset-0 rounded-full bg-[#00a884]/30 pulse-ring"
+              style={{ animationDelay: "0.3s" }}
+            />
             <Avatar src={peer.profilePic} name={peer.fullName} size={120} />
           </div>
           <h2 className="text-2xl font-medium text-white">
@@ -110,8 +113,10 @@ const CallOverlay = () => {
       <audio ref={remoteAudioRef} autoPlay playsInline />
 
       {/* Top bar */}
-      <div className="px-6 py-4 flex items-center justify-between text-white
-       bg-gradient-to-b from-black/60 to-transparent z-10">
+      <div
+        className="px-6 py-4 flex items-center justify-between text-white
+       bg-gradient-to-b from-black/60 to-transparent z-10"
+      >
         <div className="flex items-center gap-3">
           <Avatar src={peer.profilePic} name={peer.fullName} size={42} />
           <div>
@@ -128,13 +133,14 @@ const CallOverlay = () => {
             {(callState.connectionState || callState.iceState) &&
               callState.status === "active" && (
                 <p className="text-[10px] text-[#8696a0] mt-0.5 capitalize">
-                  {callState.iceState === "connected" || callState.iceState === "completed"
+                  {callState.iceState === "connected" ||
+                  callState.iceState === "completed"
                     ? "Connected"
                     : callState.iceState
-                    ? `Network: ${callState.iceState}`
-                    : callState.connectionState
-                    ? `Call: ${callState.connectionState}`
-                    : ""}
+                      ? `Network: ${callState.iceState}`
+                      : callState.connectionState
+                        ? `Call: ${callState.connectionState}`
+                        : ""}
                 </p>
               )}
           </div>
@@ -160,7 +166,11 @@ const CallOverlay = () => {
               <div className="flex flex-col items-center text-white">
                 <div className="relative inline-block">
                   <span className="absolute inset-0 rounded-full bg-[#00a884]/30 pulse-ring" />
-                  <Avatar src={peer.profilePic} name={peer.fullName} size={160} />
+                  <Avatar
+                    src={peer.profilePic}
+                    name={peer.fullName}
+                    size={160}
+                  />
                 </div>
                 <p className="mt-6 text-xl">{peer.fullName}</p>
                 <p className="text-sm text-[#aebac1] mt-1">Connecting...</p>
