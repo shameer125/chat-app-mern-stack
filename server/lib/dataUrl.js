@@ -7,6 +7,7 @@ export function simplifyDataUriForUpload(value) {
   if (typeof value !== "string" || !value.startsWith("data:")) {
     return value;
   }
+  
   const comma = value.indexOf(",");
   if (comma === -1) return value;
   const meta = value.slice(5, comma);
