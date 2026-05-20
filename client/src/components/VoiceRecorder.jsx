@@ -14,7 +14,9 @@ const VoiceRecorder = ({ onSend, onCancel }) => {
     let mounted = true;
     (async () => {
       try {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        const stream = await navigator.mediaDevices.getUserMedia({
+          audio: true,
+        });
         if (!mounted) {
           stream.getTracks().forEach((t) => t.stop());
           return;
@@ -94,8 +96,10 @@ const VoiceRecorder = ({ onSend, onCancel }) => {
   };
 
   return (
-    <div className="flex-1 flex items-center gap-3 bg-[#2a3942] rounded-full 
-    px-4 py-2.5 fade-up">
+    <div
+      className="flex-1 flex items-center gap-3 bg-[#2a3942] rounded-full 
+    px-4 py-2.5 fade-up"
+    >
       <button
         onClick={cancel}
         className="text-[#f15c6d] hover:scale-110 transition"
@@ -115,9 +119,7 @@ const VoiceRecorder = ({ onSend, onCancel }) => {
               key={i}
               className="w-0.5 bg-[#8696a0]/60 rounded"
               style={{
-                height: `${
-                  4 + Math.abs(Math.sin((seconds + i) * 0.5)) * 14
-                }px`,
+                height: `${4 + Math.abs(Math.sin((seconds + i) * 0.5)) * 14}px`,
               }}
             />
           ))}
