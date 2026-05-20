@@ -94,7 +94,8 @@ const VoiceRecorder = ({ onSend, onCancel }) => {
   };
 
   return (
-    <div className="flex-1 flex items-center gap-3 bg-[#2a3942] rounded-full px-4 py-2.5 fade-up">
+    <div className="flex-1 flex items-center gap-3 bg-[#2a3942] rounded-full 
+    px-4 py-2.5 fade-up">
       <button
         onClick={cancel}
         className="text-[#f15c6d] hover:scale-110 transition"
@@ -134,7 +135,8 @@ const VoiceRecorder = ({ onSend, onCancel }) => {
       </button>
       <button
         onClick={send}
-        className="bg-[#00a884] text-white p-2.5 rounded-full hover:bg-[#06cf9c] transition"
+        className="bg-[#00a884] text-white p-2.5 rounded-full hover:bg-[#06cf9c] 
+        transition"
         title="Send"
       >
         <FaPaperPlane className="text-sm" />
