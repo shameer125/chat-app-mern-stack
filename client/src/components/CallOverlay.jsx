@@ -110,7 +110,8 @@ const CallOverlay = () => {
       <audio ref={remoteAudioRef} autoPlay playsInline />
 
       {/* Top bar */}
-      <div className="px-6 py-4 flex items-center justify-between text-white bg-gradient-to-b from-black/60 to-transparent z-10">
+      <div className="px-6 py-4 flex items-center justify-between text-white
+       bg-gradient-to-b from-black/60 to-transparent z-10">
         <div className="flex items-center gap-3">
           <Avatar src={peer.profilePic} name={peer.fullName} size={42} />
           <div>
@@ -171,7 +172,8 @@ const CallOverlay = () => {
                 autoPlay
                 playsInline
                 muted
-                className="absolute bottom-6 right-6 w-40 h-56 md:w-52 md:h-72 rounded-2xl object-cover border-2 border-[#00a884] shadow-2xl"
+                className="absolute bottom-6 right-6 w-40 h-56 md:w-52 md:h-72 
+                rounded-2xl object-cover border-2 border-[#00a884] shadow-2xl"
                 style={{ transform: "scaleX(-1)" }}
               />
             )}
