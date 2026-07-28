@@ -11,13 +11,16 @@ const ProfilePage = () => {
   const fileRef = useRef(null);
 
   const [selectedImg, setSelectedImg] = useState(null);
+
   const [name, setName] = useState(authUser?.fullName || "");
+  
   const [bio, setBio] = useState(authUser?.bio || "Hey there! I am using QuickChat.");
   const [editingName, setEditingName] = useState(false);
   const [editingBio, setEditingBio] = useState(false);
   const [saving, setSaving] = useState(false);
 
   const handleSave = async () => {
+
     setSaving(true);
     try {
       if (!selectedImg) {
