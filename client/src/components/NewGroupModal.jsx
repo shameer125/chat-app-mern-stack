@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import Avatar from "./Avatar";
 import { sid, idEq } from "../lib/utils";
 
+
 export default function NewGroupModal({ open, onClose }) {
   const { authUser } = useContext(AuthContext);
   const { users, getUsers, openGroup } = useContext(ChatContext);
@@ -20,12 +21,14 @@ export default function NewGroupModal({ open, onClose }) {
     [users, authUser]
   );
 
+
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return others;
     return others.filter((u) => u.fullName?.toLowerCase().includes(q));
   }, [others, query]);
 
+  
   if (!open) return null;
 
   const toggle = (id) => {
