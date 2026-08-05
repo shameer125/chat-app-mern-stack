@@ -29,6 +29,7 @@ const RightSidebar = () => {
   const [starredOpen, setStarredOpen] = useState(false);
   const [starredMessages, setStarredMessages] = useState([]);
 
+
   const loadStarred = useCallback(async () => {
     try {
       const { data } = await axios.get("/api/messages/starred");
@@ -104,7 +105,8 @@ const RightSidebar = () => {
             </h2>
           </div>
 
-          <div className="flex flex-col items-center bg-[#111b21] py-8 px-4 border-b-8 border-[#0b141a]">
+          <div className="flex flex-col items-center bg-[#111b21] py-8 px-4 border-b-8 
+          border-[#0b141a]">
             <Avatar src={g.image} name={g.name} size={140} />
             <h3 className="mt-4 text-xl font-medium text-white">{g.name}</h3>
             <p className="text-sm text-[#8696a0] mt-1">
